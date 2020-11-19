@@ -27,8 +27,15 @@ namespace RestAPI_PickPoint.Data
 
         public Order GetOrderById(int id)
         {
-            return new Order { 
-                number = 123, status = 31, orderList = new string[] { "", "", "" }, cost = 15, deliveryNumber = 123, recipientPhone = "", FIO = "" 
+            return new Order
+            {
+                number = 123,
+                status = 31,
+                orderList = new string[] { "", "", "" },
+                cost = 15,
+                deliveryNumber = 123,
+                recipientPhone = "",
+                FIO = ""
             };
         }
     }
