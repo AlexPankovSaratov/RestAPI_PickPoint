@@ -8,7 +8,12 @@ namespace RestAPI_PickPoint.Data
 {
     public class MockOrderRepo : IOrderRepo
     {
-        public IEnumerable<Order> GetAppOrders()
+        public void CreateOrder(Order newOrder)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Order> GetAllOrders()
         {
             var orders = new List<Order>
             {

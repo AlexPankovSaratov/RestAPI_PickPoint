@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace RestAPI_PickPoint.Data
 {
-    interface IOrderRepo
+    public interface IOrderRepo
     {
-        public IEnumerable<Order> GetAppOrders();
-        public Order GetOrderById(int id);
+        IEnumerable<Order> GetAllOrders();
+        Order GetOrderById(int id);
+        void CreateOrder(Order newOrder);
     }
 }
