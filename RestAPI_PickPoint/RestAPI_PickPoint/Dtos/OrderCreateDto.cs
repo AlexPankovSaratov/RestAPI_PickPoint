@@ -7,7 +7,6 @@ namespace RestAPI_PickPoint.Dtos
 {
     public class OrderCreateDto
     {
-        public int number { get; set; }
         public int status { get; set; }
         public string[] orderList { get; set; }
         public decimal cost { get; set; }

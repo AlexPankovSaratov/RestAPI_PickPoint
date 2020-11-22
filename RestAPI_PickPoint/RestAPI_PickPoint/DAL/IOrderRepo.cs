@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestAPI_PickPoint.Data
+namespace RestAPI_PickPoint.DAL
 {
     public interface IOrderRepo
     {
         IEnumerable<Order> GetAllOrders();
-        Order GetOrderById(int id);
-        void CreateOrder(Order newOrder);
+        Order GetOrderByNumber(int targetNumber);
+        Order CreateOrder(Order newOrder);
+        Order UpdateOrder(Order updateOrder);
+        Order CancelOrder(int targetNumber);
     }
 }

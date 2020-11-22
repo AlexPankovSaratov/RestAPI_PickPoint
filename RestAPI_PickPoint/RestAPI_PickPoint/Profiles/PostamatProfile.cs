@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace RestAPI_PickPoint.Profiles
 {
-    public class OrderProfile : Profile
+    public class PostamatProfile : Profile
     {
-        public OrderProfile()
+        public PostamatProfile()
         {
-            CreateMap<Order, OrderReadDto>();
-            CreateMap<OrderCreateDto, Order>();
-            CreateMap<OrderReadDto, Order>();
+            CreateMap<Postamat, PostamatReadDto>();
         }
     }
 }

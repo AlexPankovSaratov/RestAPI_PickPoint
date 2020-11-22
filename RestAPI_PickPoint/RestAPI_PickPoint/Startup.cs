@@ -11,7 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using RestAPI_PickPoint.Data;
+using RestAPI_PickPoint.BLL;
+using RestAPI_PickPoint.DAL;
 
 namespace RestAPI_PickPoint
 {
@@ -29,6 +30,9 @@ namespace RestAPI_PickPoint
         {
             services.AddControllers();
             services.AddScoped<IOrderRepo, MockOrderRepo>();
+            services.AddScoped<IOrderLogic, MockOrderLogic>();
+            services.AddScoped<IPostamatRepo, MockPostamatRepo>();
+            services.AddScoped<IPostamatLogic, MockPostamatLogic>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
